@@ -4,9 +4,84 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-    
+<body>   
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Back-End Developer</p>
+                <h1>Hi, I'm <span>Anil</span><br> Maharjan From Nepal</h1>
+            </div>
+        </div>
+    </div>
+    <!--About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus accusantium perspiciatis quo, architecto facilis tenetur nulla voluptatibus, ut praesentium officiis odit optio debitis culpa velit facere nisi necessitatibus mollitia consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nostrum error autem, itaque rerum doloribus odit nemo, similique tempora soluta dolore porro facilis tempore suscipit deleniti. Molestiae possimus earum ab!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                   
+                     <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Java</span><br>Developing Web Applications</li>
+                            <li><span>Java</span><br>Developing Web Applications</li>
+                            <li><span>Java</span><br>Developing Web Applications</li>
+                        </ul>
+                    </div>
+                     <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Java</span><br>Developing Web Applications</li>
+                            <li><span>Java</span><br>Developing Web Applications</li>
+                            <li><span>Java</span><br>Developing Web Applications</li>
+                        </ul>
+                    </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Java</span><br>Developing Web Applications</li>
+                            <li><span>Java</span><br>Developing Web Applications</li>
+                            <li><span>Java</span><br>Developing Web Applications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+
+        function opentab(tabName){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+    </script>
 </body>
 </html>
