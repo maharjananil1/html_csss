@@ -6,19 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Portfolio</title>
         <link rel="stylesheet" href="/css/style.css">
+        <script src="https://kit.fontawesome.com/d105ebe452.js" crossorigin="anonymous"></script>
 </head>
 <body>   
     <div id="header">
         <div class="container">
             <nav>
                 <img src="./images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-times" onclick="closeMenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Back-End Developer</p>
@@ -68,6 +71,98 @@
         </div>
     </div>
 
+    <!-- Services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Java Development</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum possimus minus voluptatibus corporis, cupiditate laborum expedita illo iusto quos culpa maxime qui provident eveniet debitis repudiandae facere amet alias dignissimos?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                  <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Java Development</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum possimus minus voluptatibus corporis, cupiditate laborum expedita illo iusto quos culpa maxime qui provident eveniet debitis repudiandae facere amet alias dignissimos?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                  <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Java Development</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum possimus minus voluptatibus corporis, cupiditate laborum expedita illo iusto quos culpa maxime qui provident eveniet debitis repudiandae facere amet alias dignissimos?</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ab quia ducimus culpa possimus adipisci quisquam reprehenderit, labore a voluptates libero eum voluptas hic porro rem laborum commodi odit blanditiis?</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="images/work-2.png">
+                     <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ab quia ducimus culpa possimus adipisci quisquam reprehenderit, labore a voluptates libero eum voluptas hic porro rem laborum commodi odit blanditiis?</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="images/work-3.png">
+                     <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ab quia ducimus culpa possimus adipisci quisquam reprehenderit, labore a voluptates libero eum voluptas hic porro rem laborum commodi odit blanditiis?</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>  
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 0123456789</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="files/Anil-Maharjan.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Anil. <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+
     <script>
         var tablinks = document.getElementsByClassName('tab-links');
         var tabcontents = document.getElementsByClassName('tab-contents');
@@ -81,6 +176,15 @@
             }
             event.currentTarget.classList.add('active-link');
             document.getElementById(tabName).classList.add('active-tab');
+        }
+    </script>
+    <script>
+        var sideMenu=document.getElementById("sidemenu");
+        function openMenu(){
+            sideMenu.style.right = "0";
+        }
+        function closeMenu(){
+            sideMenu.style.right = "-200px";
         }
     </script>
 </body>
